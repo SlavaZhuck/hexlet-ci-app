@@ -13,11 +13,11 @@ jobs:
         uses: actions/checkout@main
       - run: make setup
       - run: make lint
-      - name: Upload a single artifact
-        uses: actions/upload-artifact
-	with:
-    	  name: my-artifact
-    	  path: ./ # or path/to/artifact
+      #- name: Upload a single artifact
+      #  uses: actions/upload-artifact
+#	with:
+ #   	  name: my-artifact
+  #  	  path: ./ # or path/to/artifact
       
 
 
@@ -26,10 +26,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps: 
-      - name: Download a single artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: my-artifact
+      #- name: Download a single artifact
+      #  uses: actions/download-artifact@v4
+      #  with:
+      #    name: my-artifact
       
       - run: make tests      
       - run: make start
