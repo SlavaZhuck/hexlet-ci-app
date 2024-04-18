@@ -19,7 +19,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    needs: build
+    #needs: build
     steps: 
       - run: make tests
 
