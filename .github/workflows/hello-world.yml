@@ -12,7 +12,7 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@main
       - run: make setup
-      - run: make start
+      #- run: make start
       - run: make tests
       - run: make lint
 
