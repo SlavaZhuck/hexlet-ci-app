@@ -30,7 +30,8 @@ jobs:
       #  uses: actions/download-artifact@v4
       #  with:
       #    name: my-artifact
-      
+      - name: checkout repo
+        uses: actions/checkout@main    
       - run: make tests      
       - run: make start
       - run: make tests
